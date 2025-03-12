@@ -1,20 +1,3 @@
-"""
-URL configuration for src project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.1/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
-
 from django.urls import path
 from website import views
 
@@ -22,6 +5,14 @@ from website import views
 urlpatterns = [
     path("", views.IndexView.as_view(), name="indexpage"),
     path("criar/", views.CreatePageView.as_view(), name="createpage"),
-    path("criar/cliente/", views.CreateClientView.as_view(), name="createclientpage")
+    path("criar/cliente/", views.CreateClientView.as_view(), name="createclientpage"),
+    path("criar/produto/", views.CreateProductView.as_view(), name="createproductpage"),
+    path("criar/pedido/", views.CreateOrderView.as_view(), name="createorderpage"),
+
+    path("listar/", views.ReadPageView.as_view(), name="readpage"),
+    path("listar/cliente/", views.ReadClientView.as_view(), name="readclientpage"),
+
+
+
 
 ]

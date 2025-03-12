@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% block content %}
+<div>
+  {% for c in clients %}
+  <div>
+    ID: {{ c.id }}
+    NOME: {{ c.nome }}
+    EMAIL: {{ c.email }}
+    TELEFONE: {{ c.telefone }}
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
