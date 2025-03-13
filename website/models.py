@@ -20,7 +20,7 @@ class Pedidos(models.Model):
     data_pedido = models.DateField()
 
     class Meta:
-        
+         
         db_table = 'pedidos'
 
     

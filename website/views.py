@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView 
-from django.views.generic.edit import CreateView 
+from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.list import ListView
 from . import forms, models 
 
 
@@ -48,9 +49,52 @@ class ReadClientView(ListView):
         context = super().get_context_data(**kwargs) 
         
         return context;
+
+
+class ReadProductView(ListView):
+    template_name = "read_product.html"
+    model = models.Produtos 
+    context_object_name = "products"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs) 
+
+        return context;
+
+
+class ReadOrderView(ListView):
+    template_name = "read_order.html"
+    model = models.Pedidos 
+    context_object_name = "orders"
     
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs) 
+
+        return context;
 
 
+# update
+class UpdatePageView(TemplateView):
+    template_name = "update.html"
 
 
+class UpdateClientView(UpdateView):
+    template_name = "update_client.html"
+    model = models.Clientes
+    form_class = forms.UpdateClientForm 
+    success_url = "#"
+
+
+class UpdateProductView(UpdateView):
+    template_name = "update_product.html"
+    model = models.Produtos
+    form_class = forms.UpdateProductForm 
+    success_url = "#"
+
+
+class UpdateOrderView(UpdateView):
+    template_name = "update_order.html"
+    model = models.Pedidos 
+    form_class = forms.UpdateOrderForm 
+    success_url = "#"
 

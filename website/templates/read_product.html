@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+{% block content %}
+<div>
+  {% for p in products %}
+  <div>
+    ID: {{ p.id }}
+    NOME: {{ p.nome }}
+    DESCRIÇÃO: {{ p.descricao }}
+    PREÇO: {{ p.preco }}
+    <a href="{% url 'updateproductpage' p.id %}">update</a>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

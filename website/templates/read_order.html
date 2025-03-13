@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% block content %}
+<div>
+  {% for o in orders %}
+  <div>
+    ID: {{ o.id }}
+    CLIENTE: {{ o.clientes }}
+    PRODUTO: {{ o.produtos }}
+    DATA_PEDIDO: {{ o.data_pedido }}
+    <a href="{% url 'updateorderpage"' o.id %}">update</a>
+    {% endfor %}
+  </div>
+  {% endblock %}
