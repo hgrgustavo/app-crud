@@ -13,3 +13,5 @@ O banco de dados escolhido para o projeto foi o [MySQL](https://www.mysql.com/):
 Não sabe por onde começar? Um [ponto de partida](https://docs.djangoproject.com/en/5.1/ref/databases/) são os serviços com suporte oficial pelo framework Django.
 
 ## Funcionalidades 
+A regra de negócio do app consiste em operações CRUD (Create, Read, Update and Delete), operações fundamentais em qualquer aplicação web.
+
