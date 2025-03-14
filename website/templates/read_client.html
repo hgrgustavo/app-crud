@@ -8,6 +8,7 @@
     EMAIL: {{ c.email }}
     TELEFONE: {{ c.telefone }}
     <a href="{% url 'updateclientpage' c.id %}">update</a>
+    <a href="{% url 'deleteclientpage' c.id %}">excluir</a>
   </div>
   {% endfor %}
 </div>

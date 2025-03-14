@@ -1,6 +1,33 @@
-{% extends "index.html" %} {% block content %} <div>
-  <a href="{% url 'createclientpage' %}">Adicionar Cliente</a>
-  <a href="{% url 'createproductpage' %}">Adicionar Produto</a>
-  <a href="{% url 'createorderpage' %}">Adicionar Pedido</a>
-</div> 
+{% extends "index.html" %}
+{% load static %}
+  {% block content %}
+<div class="card-group ">
+ <div class="card h-50 m-2 d-flex align-items-center">
+   <img src="{% static 'img/businessman.png' %}" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Adicionar cliente</h5>
+        <p class="card-text">Formulário para adicionar um novo cliente</p>
+        <a href="{% url 'createclientpage' %}" class="btn btn-primary">+ Adicionar</a>
+      </div>
+  </div>
+
+ <div class="card h-50 m-2 d-flex align-items-center ">
+   <img src="{% static 'img/box.png' %}" class="card-img-top h-25">
+      <div class="card-body">
+        <h5 class="card-title">Adicionar produto</h5>
+        <p class="card-text">Formulário para adicionar um novo produto</p>
+        <a href="{% url 'createproductpage' %}" class="btn btn-primary">+ Adicionar</a>
+      </div>
+  </div>
+
+ 
+ <div class="card h-50 m-2 d-flex align-items-center">
+   <img src="{% static 'img/checkout.png' %}" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Adicionar pedido</h5>
+        <p class="card-text">Formulário para adicionar um novo pedido</p>
+        <a href="{% url 'createproductpage' %}" class="btn btn-primary">+ Adicionar</a>
+      </div>
+  </div>
+</div>
 {% endblock %}

@@ -19,7 +19,10 @@ urlpatterns = [
     path("listar/produto/atualizar/<int:pk>/", views.UpdateProductView.as_view(), name="updateproductpage"),
     path("listar/pedido/atualizar/<int:pk>/", views.UpdateOrderView.as_view(), name="updateorderpage"),
     
-
+    path("listar/cliente/excluir/<int:pk>/", views.DeleteClientView.as_view(), name="deleteclientpage"),
+    path("listar/produto/excluir/<int:pk>/", views.DeleteProductView.as_view(), name="deleteproductpage"),
+    path("listar/pedido/excluir/<int:pk>/", views.DeleteOrderView.as_view(), name="deleteorderpage"),
+    
 
 
 

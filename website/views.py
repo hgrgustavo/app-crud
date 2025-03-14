@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView 
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.list import ListView
 from . import forms, models 
 
@@ -97,4 +97,24 @@ class UpdateOrderView(UpdateView):
     model = models.Pedidos 
     form_class = forms.UpdateOrderForm 
     success_url = "#"
+
+
+# delete
+class DeleteClientView(DeleteView):
+    template_name = "delete_client.html"
+    model = models.Clientes 
+    success_url = "#" 
+
+
+class DeleteProductView(DeleteView):
+    template_name = "delete_product.html"
+    model = models.Produtos 
+    success_url = "#"
+
+
+class DeleteOrderView(DeleteView):
+    template_name = "delete_order.html"
+    model = models.Pedidos 
+    success_url = "#"
+
 

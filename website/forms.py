@@ -45,3 +45,29 @@ class UpdateOrderForm(ModelForm):
             "id": Select(attrs={"autofocus": "autofocus", "disabled": "disabled"})
         }
 
+
+class DeleteClientForm(ModelForm):
+    class Meta: 
+        model = models.Clientes 
+        fields = "__all__"
+        widgets = {
+            "id": Select(attrs={"autofocus": "autofocus", "disabled": "disabled"})
+        }
+
+
+class DeleteProductForm(ModelForm): 
+    class Meta: 
+        model = models.Produtos 
+        fields = "__all__" 
+        widgets = {
+            "id": Select(attrs={"autofocus": "autofocus", "disabled": "disabled"})
+        }
+
+
+class DeleteOrderForm(ModelForm):
+    class Meta: 
+        model = models.Pedidos 
+        fields = "__all__"
+        widgets = {
+            "id": Select(attrs={"autofocus": "autofocus", "disabled": "disabled"})
+        }

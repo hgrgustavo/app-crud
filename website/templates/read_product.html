@@ -8,6 +8,7 @@
     DESCRIÇÃO: {{ p.descricao }}
     PREÇO: {{ p.preco }}
     <a href="{% url 'updateproductpage' p.id %}">update</a>
+    <a href="{% url 'deleteproductpage' p.id %}">excluir</a>
   </div>
   {% endfor %}
 </div>
