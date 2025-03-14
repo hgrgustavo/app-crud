@@ -19,7 +19,7 @@ class CreateProductForm(ModelForm):
         widgets = {
             "nome": TextInput(attrs={"placeholder": "Nome do produto", "class": "form-control w-25"  }),
             "descricao": Textarea(attrs={"placeholder": "Descrição do produto", "class": "form-control w-25"}),
-            "preco": NumberInput(attrs={"placeholder": "Preço do produto", "class": "form-control w-25" }),
+            "preco": NumberInput(attrs={"placeholder": "Preço do produto", "class": "form-control w-25", "id": "price-input" }),
         }
 
 
